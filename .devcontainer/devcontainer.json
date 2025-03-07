@@ -1,0 +1,19 @@
+{
+  "name": "Ubuntu Cinnamon Desktop Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USER": "testuser",
+      "PASS": "1234"
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "forwardPorts": [
+    3389,
+    5902
+  ],
+  "remoteUser": "testuser",
+  "postCreateCommand": "echo 'Container is ready for development!'"
+}
